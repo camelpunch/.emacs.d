@@ -23,10 +23,10 @@
 (defun install-packages ()
   "Install packages that I use"
   (interactive)
-  (package-refresh-contents)
-  (dolist (package packages)
-    (unless (package-installed-p package)
-      (package-install package))))
+  (mapc #'(lambda (package)
+	    (unless (package-installed-p package)
+              (package-install package)))
+	packages))
 
 ;;;; enable stuff
 
