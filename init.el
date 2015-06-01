@@ -5,7 +5,7 @@
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (setq inhibit-startup-message t)
 
-;;;; package stuff
+;;;; packages
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
@@ -23,12 +23,13 @@
 (defun install-packages ()
   "Install packages that I use"
   (interactive)
+  (package-refresh-contents)
   (mapc #'(lambda (package)
 	    (unless (package-installed-p package)
               (package-install package)))
 	packages))
 
-;;;; enable stuff
+;;;; enable packages
 
 (when (package-installed-p 'rainbow-delimiters)
   (require 'rainbow-delimiters)
@@ -42,3 +43,13 @@
   (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
   (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
   (add-hook 'scheme-mode-hook           #'enable-paredit-mode))
+
+;;;; editor config
+
+(xterm-mouse-mode t)
+(global-set-key [mouse-4] '(lambda ()
+			     (interactive)
+			     (scroll-down 1)))
+(global-set-key [mouse-5] '(lambda ()
+			     (interactive)
+			     (scroll-up 1)))
