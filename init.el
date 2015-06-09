@@ -19,6 +19,7 @@
     company
     paredit
     rainbow-delimiters
+    yaml-mode
     ))
 
 (defun install-packages ()
