@@ -51,6 +51,12 @@
 (when (package-installed-p 'company)
   (add-hook 'after-init-hook 'global-company-mode))
 
+;;;; cider config
+(add-hook 'cider-mode-hook #'eldoc-mode)
+(setq nrepl-log-messages t)
+(setq nrepl-hide-special-buffers t)
+(setq cider-prompt-for-symbol nil)
+
 ;;;; editor config
 
 (require 'mouse)
