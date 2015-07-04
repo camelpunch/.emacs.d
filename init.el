@@ -17,6 +17,7 @@
     cider
     clojure-mode
     company
+    git-gutter
     paredit
     rainbow-delimiters
     yaml-mode
@@ -33,9 +34,11 @@
 
 ;;;; enable packages
 
-(when (package-installed-p 'rainbow-delimiters)
-  (require 'rainbow-delimiters)
-  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
+(when (package-installed-p 'git-gutter)
+  (add-hook 'after-init-hook 'global-git-gutter-mode))
+
+(when (package-installed-p 'company)
+  (add-hook 'after-init-hook 'global-company-mode))
 
 (when (package-installed-p 'paredit)
   (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
@@ -48,13 +51,13 @@
   (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
   (add-hook 'scheme-mode-hook           #'enable-paredit-mode))
 
-(when (package-installed-p 'company)
-  (add-hook 'after-init-hook 'global-company-mode))
+(when (package-installed-p 'rainbow-delimiters)
+  (require 'rainbow-delimiters)
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
 ;;;; cider config
 (add-hook 'cider-mode-hook #'eldoc-mode)
 (setq nrepl-log-messages t)
-(setq nrepl-hide-special-buffers t)
 (setq cider-prompt-for-symbol nil)
 
 ;;;; editor config
