@@ -19,6 +19,7 @@
     company
     paredit
     rainbow-delimiters
+    rust-mode
     yaml-mode
     ))
 
