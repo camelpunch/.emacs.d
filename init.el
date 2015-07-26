@@ -17,7 +17,6 @@
     cider
     clojure-mode
     company
-    git-gutter
     paredit
     rainbow-delimiters
     yaml-mode
