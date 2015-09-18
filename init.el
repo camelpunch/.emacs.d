@@ -55,6 +55,9 @@
   (require 'rainbow-delimiters)
   (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
+;;;; clojure boot config
+(add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
+
 ;;;; cider config
 (add-hook 'cider-mode-hook #'eldoc-mode)
 (setq nrepl-log-messages t)
