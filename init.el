@@ -17,6 +17,8 @@
     cider
     clojure-mode
     company
+    erlang
+    haskell-mode
     paredit
     rainbow-delimiters
     rust-mode
