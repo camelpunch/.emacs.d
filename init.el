@@ -78,3 +78,6 @@
 			     (interactive)
 			     (scroll-up 1)))
 (add-hook 'prog-mode-hook 'show-paren-mode)
+
+(custom-set-variables
+ '(clojure-align-forms-automatically t))
