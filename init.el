@@ -17,6 +17,7 @@
     cider
     clojure-mode
     company
+    elm-mode
     erlang
     haskell-mode
     paredit
