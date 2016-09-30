@@ -86,6 +86,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(clojure-align-forms-automatically t)
+ '(elm-format-on-save t)
  '(elm-indent-offset 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
