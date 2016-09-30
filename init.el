@@ -81,4 +81,15 @@
 (add-hook 'prog-mode-hook 'show-paren-mode)
 
 (custom-set-variables
- '(clojure-align-forms-automatically t))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(clojure-align-forms-automatically t)
+ '(elm-indent-offset 2))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
