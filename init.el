@@ -20,6 +20,7 @@
     elm-mode
     erlang
     haskell-mode
+    merlin
     paredit
     rainbow-delimiters
     rust-mode
@@ -65,6 +66,11 @@
 (add-hook 'cider-mode-hook #'eldoc-mode)
 (setq nrepl-log-messages t)
 (setq cider-prompt-for-symbol nil)
+
+;;;; ocaml config
+(load "/Users/pivotal/.opam/system/share/emacs/site-lisp/tuareg-site-file")
+(add-to-list 'load-path "/Users/pivotal/.opam/system/share/emacs/site-lisp")
+(require 'ocp-indent)
 
 ;;;; editor config
 
