@@ -19,6 +19,7 @@
     company
     elm-mode
     erlang
+    fiplr
     haskell-mode
     merlin
     paredit
@@ -85,6 +86,7 @@
 (global-set-key [mouse-5] '(lambda ()
 			     (interactive)
 			     (scroll-up 1)))
+(global-set-key (kbd "C-x f") 'fiplr-find-file)
 (add-hook 'prog-mode-hook 'show-paren-mode)
 
 (custom-set-variables
