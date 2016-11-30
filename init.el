@@ -53,7 +53,8 @@
   (add-hook 'ielm-mode-hook             #'enable-paredit-mode)
   (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
   (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
-  (add-hook 'scheme-mode-hook           #'enable-paredit-mode))
+  (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+  (add-hook 'haskell-mode-hook          #'enable-paredit-mode))
 
 (when (package-installed-p 'rainbow-delimiters)
   (require 'rainbow-delimiters)
@@ -71,6 +72,9 @@
 (with-eval-after-load 'company
   (add-to-list 'company-backends 'company-elm))
 (add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
+
+;;;; haskell config
+(setq haskell-stylish-on-save t)
 
 ;;;; editor config
 
