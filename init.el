@@ -92,6 +92,9 @@
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
 (add-hook 'prog-mode-hook 'show-paren-mode)
 
+(setq fiplr-ignored-globs '((directories (".git" ".stack-work"))
+			    (files ("*.jpg" "*.png" "*.zip" "*~"))))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
