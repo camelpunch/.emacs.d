@@ -92,7 +92,7 @@
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
 (add-hook 'prog-mode-hook 'show-paren-mode)
 
-(setq fiplr-ignored-globs '((directories (".git" ".stack-work"))
+(setq fiplr-ignored-globs '((directories (".git" ".stack-work" "elm-stuff"))
 			    (files ("*.jpg" "*.png" "*.zip" "*~"))))
 
 (custom-set-variables
