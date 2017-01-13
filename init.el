@@ -20,6 +20,7 @@
     elm-mode
     erlang
     fiplr
+    flycheck
     haskell-mode
     paredit
     rainbow-delimiters
@@ -78,6 +79,7 @@
 (defun set-haskell-keybindings ()
   (local-set-key (quote [27 46]) (quote haskell-mode-jump-to-def)))
 (add-hook 'haskell-mode-hook #'set-haskell-keybindings)
+(add-hook 'haskell-mode-hook #'flycheck-mode)
 
 ;;;; editor config
 
