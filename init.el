@@ -115,6 +115,9 @@
  '(haskell-indentation-left-offset 4)
  '(haskell-indentation-starter-offset 4)
  '(haskell-stylish-on-save t)
+ '(package-selected-packages
+   (quote
+    (intero yaml-mode rust-mode rainbow-delimiters paredit haskell-mode fiplr erlang elm-mode company cider)))
  '(safe-local-variable-values
    (quote
     ((haskell-process-use-ghci . t)
