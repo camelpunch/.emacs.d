@@ -20,8 +20,8 @@
     elm-mode
     erlang
     fiplr
-    flycheck
     haskell-mode
+    intero
     paredit
     rainbow-delimiters
     rust-mode
@@ -61,6 +61,9 @@
   (require 'rainbow-delimiters)
   (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
+(when (package-installed-p 'intero)
+  (add-hook 'haskell-mode-hook 'intero-mode))
+
 ;;;; clojure boot config
 (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
 
@@ -79,7 +82,6 @@
 (defun set-haskell-keybindings ()
   (local-set-key (quote [27 46]) (quote haskell-mode-jump-to-def)))
 (add-hook 'haskell-mode-hook #'set-haskell-keybindings)
-(add-hook 'haskell-mode-hook #'flycheck-mode)
 
 ;;;; editor config
 
