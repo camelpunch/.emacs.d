@@ -79,12 +79,8 @@
 
 ;;;; haskell config
 (setq haskell-stylish-on-save t)
-(defun set-haskell-keybindings ()
-  (local-set-key (quote [27 46]) (quote haskell-mode-jump-to-def)))
-(add-hook 'haskell-mode-hook #'set-haskell-keybindings)
 
 ;;;; editor config
-
 (require 'mouse)
 (xterm-mouse-mode t)
 (defun track-mouse (e))
@@ -110,18 +106,13 @@
  '(clojure-align-forms-automatically t)
  '(elm-format-on-save t)
  '(elm-indent-offset 2)
- '(haskell-indent-spaces 4)
- '(haskell-indentation-layout-offset 4)
- '(haskell-indentation-left-offset 4)
- '(haskell-indentation-starter-offset 4)
- '(haskell-stylish-on-save t)
+ '(haskellindent-spaces 2)
+ '(haskell-indentation-layout-offset 2)
+ '(haskell-indentation-left-offset 2)
+ '(haskell-indentation-starter-offset 2)
  '(package-selected-packages
    (quote
-    (intero yaml-mode rust-mode rainbow-delimiters paredit haskell-mode fiplr erlang elm-mode company cider)))
- '(safe-local-variable-values
-   (quote
-    ((haskell-process-use-ghci . t)
-     (haskell-indent-spaces . 4)))))
+    (magit intero yaml-mode rust-mode rainbow-delimiters paredit haskell-mode fiplr erlang elm-mode company cider)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
