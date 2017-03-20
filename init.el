@@ -113,6 +113,7 @@
  '(package-selected-packages
    (quote
     (magit intero yaml-mode rust-mode rainbow-delimiters paredit haskell-mode fiplr erlang elm-mode company cider)))
+ '(send-mail-function (quote sendmail-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
