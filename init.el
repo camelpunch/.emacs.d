@@ -112,7 +112,7 @@
  '(haskellindent-spaces 2)
  '(package-selected-packages
    (quote
-    (magit intero yaml-mode rust-mode rainbow-delimiters paredit haskell-mode fiplr erlang elm-mode company cider)))
+    (idris-mode magit intero yaml-mode rust-mode rainbow-delimiters paredit haskell-mode fiplr erlang elm-mode company cider)))
  '(send-mail-function (quote sendmail-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
