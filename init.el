@@ -106,10 +106,10 @@
  '(clojure-align-forms-automatically t)
  '(elm-format-on-save t)
  '(elm-indent-offset 2)
- '(haskellindent-spaces 2)
  '(haskell-indentation-layout-offset 2)
  '(haskell-indentation-left-offset 2)
  '(haskell-indentation-starter-offset 2)
+ '(haskellindent-spaces 2)
  '(package-selected-packages
    (quote
     (magit intero yaml-mode rust-mode rainbow-delimiters paredit haskell-mode fiplr erlang elm-mode company cider)))
