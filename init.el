@@ -55,7 +55,8 @@
   (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
   (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
   (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
-  (add-hook 'haskell-mode-hook          #'enable-paredit-mode))
+  (add-hook 'haskell-mode-hook          #'enable-paredit-mode)
+  (add-hook 'idris-mode-hook            #'enable-paredit-mode))
 
 (when (package-installed-p 'rainbow-delimiters)
   (require 'rainbow-delimiters)
