@@ -105,6 +105,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(clojure-align-forms-automatically t)
+ '(custom-enabled-themes (quote (tango-dark)))
  '(elm-format-on-save t)
  '(elm-indent-offset 2)
  '(haskell-indentation-layout-offset 2)
