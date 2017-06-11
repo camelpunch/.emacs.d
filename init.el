@@ -86,6 +86,7 @@
 (xterm-mouse-mode t)
 (defun track-mouse (e))
 (setq mouse-sel-mode t)
+(setq ring-bell-function 'ignore)
 (global-auto-revert-mode t)
 (global-set-key [mouse-4] '(lambda ()
 			     (interactive)
