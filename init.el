@@ -86,7 +86,7 @@
 (add-hook 'idris-mode-hook
 	  (lambda ()
 	    (local-set-key [backtab] (quote idris-simple-indent-backtab))
-	    (local-set-key [TAB] (quot idris-simple-indent))))
+	    (local-set-key [?\t] (quote idris-simple-indent))))
 
 ;;;; editor config
 (require 'mouse)
