@@ -81,6 +81,11 @@
 ;;;; haskell config
 (setq haskell-stylish-on-save t)
 
+;;;; idris config
+(add-hook 'idris-mode-hook
+	  (lambda ()
+	    (local-set-key [backtab] (quote idris-simple-indent-backtab))))
+
 ;;;; editor config
 (require 'mouse)
 (xterm-mouse-mode t)
