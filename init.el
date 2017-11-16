@@ -123,7 +123,7 @@
  '(haskellindent-spaces 2)
  '(package-selected-packages
    (quote
-    (git-gutter-fringe magit intero yaml-mode rust-mode rainbow-delimiters paredit haskell-mode fiplr erlang elm-mode company cider)))
+    (idris-mode git-gutter-fringe magit intero yaml-mode rust-mode rainbow-delimiters paredit haskell-mode fiplr erlang elm-mode company cider)))
  '(send-mail-function (quote sendmail-send-it))
  '(show-trailing-whitespace t))
 (custom-set-faces
