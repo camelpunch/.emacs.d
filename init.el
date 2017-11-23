@@ -103,7 +103,6 @@
 			     (interactive)
 			     (scroll-up 1)))
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
-(global-set-key [s-tab] 'completion-at-point)
 (add-hook 'prog-mode-hook 'show-paren-mode)
 
 (setq fiplr-ignored-globs '((directories (".git" ".stack-work" "elm-stuff"))
