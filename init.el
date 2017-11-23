@@ -89,6 +89,7 @@
 	    (local-set-key [?\t] (quote idris-simple-indent))))
 
 ;;;; editor config
+(setq linum-format "%d ")
 (require 'mouse)
 (xterm-mouse-mode t)
 (defun track-mouse (e))
