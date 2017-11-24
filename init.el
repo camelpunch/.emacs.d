@@ -107,7 +107,6 @@
 (setq linum-format "%d ")
 (require 'mouse)
 (xterm-mouse-mode t)
-(defun track-mouse (e))
 (setq mouse-sel-mode t)
 (setq ring-bell-function 'ignore)
 (global-auto-revert-mode t)
