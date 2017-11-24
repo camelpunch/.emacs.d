@@ -1,5 +1,9 @@
 ;;; init.el --- Andrew's config
 
+;;; Commentary:
+;;; It's pretty sweet
+
+;;; Code:
 (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -34,7 +38,7 @@
     ))
 
 (defun install-packages ()
-  "Install packages that I use"
+  "Install packages that I use."
   (interactive)
   (package-refresh-contents)
   (mapc #'(lambda (package)
