@@ -21,6 +21,7 @@
     erlang
     eziam-theme
     fiplr
+    git-gutter
     go-mode
     haskell-mode
     idris-mode
@@ -138,7 +139,7 @@
  '(haskellindent-spaces 2)
  '(package-selected-packages
    (quote
-    (idris-mode git-gutter-fringe magit intero yaml-mode rust-mode rainbow-delimiters paredit haskell-mode fiplr erlang elm-mode company cider)))
+    (git-gutter yaml-mode rust-mode rainbow-delimiters paredit magit intero idris-mode go-mode fiplr eziam-theme erlang elm-mode cider)))
  '(send-mail-function (quote sendmail-send-it))
  '(show-trailing-whitespace t))
 (custom-set-faces
