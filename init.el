@@ -104,6 +104,7 @@
 
 ;;;; editor config
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(winner-mode 1)
 (setq linum-format "%d ")
 (require 'mouse)
 (xterm-mouse-mode t)
