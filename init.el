@@ -92,6 +92,8 @@
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook #'gofmt-before-save)
 (setq gofmt-before-save t)
+(require 'go-guru)
+(add-hook 'go-mode-hook #'go-guru-hl-identifier-mode)
 
 ;;;; haskell config
 (setq haskell-stylish-on-save t)
