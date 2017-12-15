@@ -106,6 +106,7 @@
 
 ;;;; editor config
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(setq org-log-done 'time)
 (winner-mode 1)
 (setq linum-format "%d ")
 (require 'mouse)
