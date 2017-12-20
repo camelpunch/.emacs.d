@@ -127,7 +127,6 @@
 
 (winner-mode 1)
 (savehist-mode 1)
-;; (add-hook 'after-init-hook #'global-flycheck-mode)
 (setq linum-format "%d ")
 (require 'mouse)
 (xterm-mouse-mode t)
