@@ -125,6 +125,9 @@
                  (org-remove-inline-images)
                  (org-present-read-write)))))
 
+;; the rest
+
+(blink-cursor-mode 0)
 (winner-mode 1)
 (savehist-mode 1)
 (setq linum-format "%d ")
