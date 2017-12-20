@@ -133,7 +133,6 @@
 (setq mouse-sel-mode t)
 (setq ring-bell-function 'ignore)
 (global-auto-revert-mode t)
-(global-set-key (kbd "C-x RET RET") 'completion-at-point)
 (global-set-key [mouse-4] '(lambda ()
 			     (interactive)
 			     (scroll-down 1)))
