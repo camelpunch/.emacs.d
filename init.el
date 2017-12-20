@@ -26,6 +26,7 @@
     eziam-theme
     fiplr
     git-gutter
+    go-guru
     go-mode
     haskell-mode
     idris-mode
@@ -104,15 +105,36 @@
 	    (local-set-key [?\t] (quote idris-simple-indent))))
 
 ;;;; editor config
-(add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; org mode
 (setq org-log-done 'time)
+
+(add-to-list 'load-path "~/path/to/org-present")
+(autoload 'org-present "org-present" nil t)
+
+(eval-after-load "org-present"
+  '(progn
+     (add-hook 'org-present-mode-hook
+               (lambda ()
+                 (org-present-big)
+                 (org-display-inline-images)
+                 (org-present-read-only)))
+     (add-hook 'org-present-mode-quit-hook
+               (lambda ()
+                 (org-present-small)
+                 (org-remove-inline-images)
+                 (org-present-read-write)))))
+
 (winner-mode 1)
+(savehist-mode 1)
+;; (add-hook 'after-init-hook #'global-flycheck-mode)
 (setq linum-format "%d ")
 (require 'mouse)
 (xterm-mouse-mode t)
 (setq mouse-sel-mode t)
 (setq ring-bell-function 'ignore)
 (global-auto-revert-mode t)
+(global-set-key (kbd "C-x RET RET") 'completion-at-point)
 (global-set-key [mouse-4] '(lambda ()
 			     (interactive)
 			     (scroll-down 1)))
@@ -139,20 +161,29 @@
  ;; If there is more than one, they won't work right.
  '(clojure-align-forms-automatically t)
  '(custom-enabled-themes (quote (eziam-dark)))
+ '(custom-safe-themes
+   (quote
+    ("4bfced46dcfc40c45b076a1758ca106a947b1b6a6ff79a3281f3accacfb3243c" "2a739405edf418b8581dcd176aaf695d319f99e3488224a3c495cb0f9fd814e3" default)))
  '(elm-format-on-save t)
  '(elm-indent-offset 2)
+ '(fci-rule-color "#383838")
  '(haskell-indentation-layout-offset 2)
  '(haskell-indentation-left-offset 2)
  '(haskell-indentation-starter-offset 2)
  '(haskellindent-spaces 2)
  '(package-selected-packages
    (quote
-    (git-gutter yaml-mode rust-mode rainbow-delimiters paredit magit intero idris-mode go-mode fiplr eziam-theme erlang elm-mode cider)))
+    (go-guru neotree toml-mode org-present dockerfile-mode flymd git-gutter yaml-mode rust-mode rainbow-delimiters paredit magit intero idris-mode go-mode fiplr eziam-theme erlang elm-mode cider)))
+ '(safe-local-variable-values (quote ((idris-load-packages "contrib"))))
  '(send-mail-function (quote sendmail-send-it))
- '(show-trailing-whitespace t))
+ '(show-paren-mode t)
+ '(show-trailing-whitespace t)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#2e3436" :foreground "#eeeeec" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :foundry "DAMA" :family "Ubuntu Mono")))))
+ )
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
