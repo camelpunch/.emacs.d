@@ -127,6 +127,7 @@
 
 ;; the rest
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 (blink-cursor-mode 0)
 (winner-mode 1)
 (savehist-mode 1)
@@ -178,7 +179,6 @@
  '(safe-local-variable-values (quote ((idris-load-packages "contrib"))))
  '(send-mail-function (quote sendmail-send-it))
  '(show-paren-mode t)
- '(show-trailing-whitespace t)
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
