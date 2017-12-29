@@ -35,6 +35,7 @@
     paredit
     rainbow-delimiters
     rust-mode
+    terraform-mode
     yaml-mode
     ))
 
@@ -94,6 +95,9 @@
 (setq gofmt-before-save t)
 (require 'go-guru)
 (add-hook 'go-mode-hook #'go-guru-hl-identifier-mode)
+
+;;;; terraform config
+(add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
 
 ;;;; haskell config
 (setq haskell-stylish-on-save t)
