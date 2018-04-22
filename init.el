@@ -146,8 +146,8 @@
 (setq mouse-wheel-progressive-speed nil)
 (setq mouse-wheel-follow-mouse 't)
 (setq scroll-step 1)
-(global-set-key (kbd "<mouse-6>") 'scroll-right)
-(global-set-key (kbd "<mouse-7>") 'scroll-left)
+(global-set-key (kbd "<mouse-6>") #'ignore)
+(global-set-key (kbd "<mouse-7>") #'ignore)
 
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
 (global-set-key (kbd "C-x g") 'magit-status)
