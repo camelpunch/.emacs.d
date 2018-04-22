@@ -1,3 +1,5 @@
 init.el~
 /elpa
 /auto-save-list
+history
+eshell/history
