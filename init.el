@@ -33,6 +33,7 @@
     intero
     magit
     paredit
+    php-mode
     rainbow-delimiters
     rust-mode
     terraform-mode
@@ -197,7 +198,7 @@
  '(haskellindent-spaces 2)
  '(package-selected-packages
    (quote
-    (go-guru neotree toml-mode org-present dockerfile-mode flymd git-gutter yaml-mode rust-mode rainbow-delimiters paredit magit intero idris-mode go-mode fiplr eziam-theme erlang elm-mode cider)))
+    (php-mode ruby-refactor tide markdown-preview-mode flycheck-gometalinter terraform-mode go-guru neotree toml-mode org-present dockerfile-mode flymd git-gutter yaml-mode rust-mode rainbow-delimiters paredit magit intero idris-mode go-mode fiplr eziam-theme erlang elm-mode cider)))
  '(safe-local-variable-values (quote ((idris-load-packages "contrib"))))
  '(send-mail-function (quote sendmail-send-it))
  '(show-paren-mode t)
