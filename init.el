@@ -134,6 +134,9 @@
 
 ;;;; editor config
 
+;; show filename in title bar regardless of numbers of frames
+(setq frame-title-format "%b")
+
 ;; org mode
 (setq org-log-done 'time)
 
