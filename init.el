@@ -21,6 +21,7 @@
     cider
     clojure-mode
     company
+    dracula-theme
     elm-mode
     erlang
     eziam-theme
