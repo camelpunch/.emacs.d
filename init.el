@@ -137,10 +137,6 @@
 ;; show filename in title bar regardless of numbers of frames
 (setq frame-title-format "%b")
 
-;; don't allow horizontal splits
-(setq split-height-threshold nil)
-(setq split-width-threshold 0)
-
 ;; fira
 
 (set-face-attribute 'default nil :height 140)
