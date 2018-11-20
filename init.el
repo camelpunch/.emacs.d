@@ -133,6 +133,9 @@
 
 ;;;; editor config
 
+;; no tabs!
+(setq-default indent-tabs-mode nil)
+
 ;; enable flycheck
 (global-flycheck-mode)
 ;; (setq flycheck-check-syntax-automatically '(save mode-enabled))
