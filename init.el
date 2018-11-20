@@ -26,6 +26,7 @@
     erlang
     eziam-theme
     fiplr
+    flycheck
     git-gutter
     go-guru
     go-mode
@@ -106,8 +107,6 @@
 (defun setup-tide-mode ()
   (interactive)
   (tide-setup)
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
   (eldoc-mode +1)
   (tide-hl-identifier-mode +1)
   ;; company is an optional dependency. You have to
@@ -133,6 +132,10 @@
 	    (local-set-key [?\t] (quote idris-simple-indent))))
 
 ;;;; editor config
+
+;; enable flycheck
+(global-flycheck-mode)
+;; (setq flycheck-check-syntax-automatically '(save mode-enabled))
 
 ;; show filename in title bar regardless of numbers of frames
 (setq frame-title-format "%b")
