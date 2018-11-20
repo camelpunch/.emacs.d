@@ -25,7 +25,6 @@
     elm-mode
     erlang
     eziam-theme
-    fiplr
     flycheck
     git-gutter
     go-guru
@@ -36,6 +35,7 @@
     magit
     paredit
     php-mode
+    projectile
     rainbow-delimiters
     rust-mode
     terraform-mode
@@ -313,12 +313,13 @@
 (global-set-key (kbd "<mouse-6>") #'ignore)
 (global-set-key (kbd "<mouse-7>") #'ignore)
 
-(global-set-key (kbd "C-x f") 'fiplr-find-file)
+(projectile-mode +1)
+(recentf-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
 (global-set-key (kbd "C-x g") 'magit-status)
 (add-hook 'prog-mode-hook 'show-paren-mode)
-
-(setq fiplr-ignored-globs '((directories (".git" ".stack-work" "elm-stuff"))
-			    (files ("*.jpg" "*.png" "*.zip" "*~" "*.ibc"))))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
