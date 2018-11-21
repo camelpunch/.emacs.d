@@ -332,7 +332,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(clojure-align-forms-automatically t)
- '(custom-enabled-themes (quote (eziam-dark)))
+ '(custom-enabled-themes (quote (dracula)))
  '(custom-safe-themes
    (quote
     ("4bfced46dcfc40c45b076a1758ca106a947b1b6a6ff79a3281f3accacfb3243c" "2a739405edf418b8581dcd176aaf695d319f99e3488224a3c495cb0f9fd814e3" default)))
