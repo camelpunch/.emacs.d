@@ -34,7 +34,6 @@
     intero
     magit
     paredit
-    php-mode
     projectile
     rainbow-delimiters
     rust-mode
