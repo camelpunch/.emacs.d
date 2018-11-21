@@ -138,7 +138,6 @@
 
 ;; enable flycheck
 (global-flycheck-mode)
-;; (setq flycheck-check-syntax-automatically '(save mode-enabled))
 
 ;; faster autocomplete
 (setq company-idle-delay 0.1)
