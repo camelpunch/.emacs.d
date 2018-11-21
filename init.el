@@ -39,6 +39,7 @@
     rust-mode
     terraform-mode
     tide
+    web-mode
     yaml-mode
     ))
 
