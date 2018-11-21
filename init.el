@@ -136,9 +136,6 @@
 ;; no tabs!
 (setq-default indent-tabs-mode nil)
 
-;; enable flycheck
-(global-flycheck-mode)
-
 ;; faster autocomplete
 (setq company-idle-delay 0.1)
 
@@ -207,6 +204,8 @@
  '(elm-format-on-save t)
  '(elm-indent-offset 2)
  '(fci-rule-color "#383838")
+ '(global-flycheck-mode t)
+ '(flycheck-global-modes (quote (not idris-mode)))
  '(haskell-indentation-layout-offset 2)
  '(haskell-indentation-left-offset 2)
  '(haskell-indentation-starter-offset 2)
