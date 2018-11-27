@@ -210,6 +210,7 @@
  '(haskell-indentation-left-offset 2)
  '(haskell-indentation-starter-offset 2)
  '(haskellindent-spaces 2)
+ '(intero-pop-to-repl nil)
  '(package-selected-packages
    (quote
     (php-mode ruby-refactor tide markdown-preview-mode flycheck-gometalinter terraform-mode go-guru neotree toml-mode org-present dockerfile-mode flymd git-gutter yaml-mode rust-mode rainbow-delimiters paredit magit intero idris-mode go-mode fiplr eziam-theme erlang elm-mode cider)))
