@@ -210,6 +210,7 @@
  '(haskell-indentation-left-offset 2)
  '(haskell-indentation-starter-offset 2)
  '(haskellindent-spaces 2)
+ '(idris-stay-in-current-window-on-compiler-error t)
  '(intero-pop-to-repl nil)
  '(package-selected-packages
    (quote
