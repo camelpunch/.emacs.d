@@ -194,6 +194,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
  '(clojure-align-forms-automatically t)
  '(custom-enabled-themes (quote (dracula)))
  '(custom-safe-themes
