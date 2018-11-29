@@ -1,0 +1,3 @@
+[submodule "emacs-haskell-unicode-input-method"]
+	path = emacs-haskell-unicode-input-method
+	url = https://github.com/roelvandijk/emacs-haskell-unicode-input-method
