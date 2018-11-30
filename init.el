@@ -214,6 +214,7 @@
  '(haskell-indentation-starter-offset 2)
  '(haskellindent-spaces 2)
  '(idris-stay-in-current-window-on-compiler-error t)
+ '(intero-extra-ghc-options (quote ("-W" "-Werror")))
  '(intero-pop-to-repl nil)
  '(package-selected-packages
    (quote
