@@ -122,6 +122,9 @@
 
 ;;;; haskell config
 (setq haskell-stylish-on-save t)
+(with-eval-after-load 'intero
+  (flycheck-add-next-checker 'intero '(warning . haskell-hlint))
+)
 
 ;;;; idris config
 (add-hook 'idris-mode-hook
