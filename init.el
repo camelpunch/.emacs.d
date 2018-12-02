@@ -122,10 +122,6 @@
 
 ;;;; haskell config
 (setq haskell-stylish-on-save t)
-(add-to-list 'load-path "~/.emacs.d/emacs-haskell-unicode-input-method")
-(require 'haskell-unicode-input-method)
-(add-hook 'haskell-mode-hook
-  (lambda () (set-input-method "haskell-unicode")))
 
 ;;;; idris config
 (add-hook 'idris-mode-hook
