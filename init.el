@@ -30,6 +30,7 @@
     go-guru
     go-mode
     haskell-mode
+    hasklig-mode
     idris-mode
     intero
     magit
@@ -79,6 +80,8 @@
 
 (when (package-installed-p 'intero)
   (add-hook 'haskell-mode-hook 'intero-mode))
+(when (package-installed-p 'hasklig-mode)
+  (add-hook 'haskell-mode-hook 'hasklig-mode))
 
 ;;;; clojure boot config
 (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
@@ -124,7 +127,12 @@
 (setq haskell-stylish-on-save t)
 (with-eval-after-load 'intero
   (flycheck-add-next-checker 'intero '(warning . haskell-hlint))
-)
+  )
+(set-face-attribute 'default nil
+                    :family "Hasklig"
+                    :height 200
+                    :weight 'normal
+                    :width 'normal)
 
 ;;;; idris config
 (add-hook 'idris-mode-hook
@@ -142,8 +150,6 @@
 
 ;; show filename in title bar regardless of numbers of frames
 (setq frame-title-format "%b")
-
-(set-face-attribute 'default nil :height 140)
 
 ;; org mode
 (setq org-log-done 'time)
@@ -217,8 +223,13 @@
  '(intero-pop-to-repl nil)
  '(package-selected-packages
    (quote
-    (php-mode ruby-refactor tide markdown-preview-mode flycheck-gometalinter terraform-mode go-guru neotree toml-mode org-present dockerfile-mode flymd git-gutter yaml-mode rust-mode rainbow-delimiters paredit magit intero idris-mode go-mode fiplr eziam-theme erlang elm-mode cider)))
- '(safe-local-variable-values (quote ((idris-load-packages "contrib"))))
+    (hasklig-mode php-mode ruby-refactor tide markdown-preview-mode flycheck-gometalinter terraform-mode go-guru neotree toml-mode org-present dockerfile-mode flymd git-gutter yaml-mode rust-mode rainbow-delimiters paredit magit intero idris-mode go-mode fiplr eziam-theme erlang elm-mode cider)))
+ '(safe-local-variable-values
+   (quote
+    ((intero-targets "infrastructure:lib" "infrastructure:exe:release" "infrastructure:test:infrastructure-test")
+     (idris-load-packages "mrk")
+     (intero-targets "release:lib" "release:exe:release-exe" "release:test:release-test")
+     (idris-load-packages "contrib"))))
  '(send-mail-function (quote sendmail-send-it))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
