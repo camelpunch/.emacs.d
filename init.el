@@ -16,10 +16,8 @@
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
 (package-initialize)
 
-(defvar packages
+(defvar config-packages
   '(
-    cider
-    clojure-mode
     company
     dracula-theme
     elm-mode
@@ -51,7 +49,7 @@
   (mapc #'(lambda (package)
 	    (unless (package-installed-p package)
               (package-install package)))
-	packages))
+	config-packages))
 
 ;;;; enable packages
 
@@ -64,8 +62,6 @@
 (when (package-installed-p 'paredit)
   (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
   (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
-  (add-hook 'clojure-mode-hook          #'enable-paredit-mode)
-  (add-hook 'cider-repl-mode-hook       #'enable-paredit-mode)
   (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
   (add-hook 'ielm-mode-hook             #'enable-paredit-mode)
   (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
@@ -82,14 +78,6 @@
   (add-hook 'haskell-mode-hook 'intero-mode))
 (when (package-installed-p 'hasklig-mode)
   (add-hook 'haskell-mode-hook 'hasklig-mode))
-
-;;;; clojure boot config
-(add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
-
-;;;; cider config
-(add-hook 'cider-mode-hook #'eldoc-mode)
-(setq nrepl-log-messages t)
-(setq cider-prompt-for-symbol nil)
 
 ;;;; elm config
 (with-eval-after-load 'company
@@ -185,7 +173,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
- '(clojure-align-forms-automatically t)
  '(custom-enabled-themes (quote (dracula)))
  '(custom-safe-themes
    (quote
@@ -204,7 +191,7 @@
  '(intero-pop-to-repl nil)
  '(package-selected-packages
    (quote
-    (hasklig-mode php-mode ruby-refactor tide markdown-preview-mode flycheck-gometalinter terraform-mode go-guru neotree toml-mode org-present dockerfile-mode flymd git-gutter yaml-mode rust-mode rainbow-delimiters paredit magit intero idris-mode go-mode fiplr eziam-theme erlang elm-mode cider)))
+    (hasklig-mode php-mode ruby-refactor tide markdown-preview-mode flycheck-gometalinter terraform-mode go-guru neotree toml-mode org-present dockerfile-mode flymd git-gutter yaml-mode rust-mode rainbow-delimiters paredit magit intero idris-mode go-mode fiplr eziam-theme erlang elm-mode)))
  '(safe-local-variable-values
    (quote
     ((intero-targets "infrastructure:lib" "infrastructure:exe:release" "infrastructure:test:infrastructure-test")
