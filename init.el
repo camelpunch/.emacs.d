@@ -71,17 +71,11 @@
   (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
   (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
   (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
-  (add-hook 'haskell-mode-hook          #'enable-paredit-mode)
   (add-hook 'idris-mode-hook            #'enable-paredit-mode))
 
 (when (package-installed-p 'rainbow-delimiters)
   (require 'rainbow-delimiters)
   (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
-
-(when (package-installed-p 'intero)
-  (add-hook 'haskell-mode-hook 'intero-mode))
-(when (package-installed-p 'hasklig-mode)
-  (add-hook 'haskell-mode-hook 'hasklig-mode))
 
 ;;;; clojure boot config
 (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
@@ -217,9 +211,11 @@
  '(haskell-indentation-layout-offset 2)
  '(haskell-indentation-left-offset 2)
  '(haskell-indentation-starter-offset 2)
+ '(haskell-mode-hook
+   (quote
+    (interactive-haskell-mode hasklig-mode intero-mode enable-paredit-mode)))
  '(haskellindent-spaces 2)
  '(idris-stay-in-current-window-on-compiler-error t)
- '(intero-extra-ghc-options (quote ("-W" "-XOverloadedStrings")))
  '(intero-pop-to-repl nil)
  '(package-selected-packages
    (quote
