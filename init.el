@@ -151,25 +151,6 @@
 ;; show filename in title bar regardless of numbers of frames
 (setq frame-title-format "%b")
 
-;; org mode
-(setq org-log-done 'time)
-
-(add-to-list 'load-path "~/path/to/org-present")
-(autoload 'org-present "org-present" nil t)
-
-(eval-after-load "org-present"
-  '(progn
-     (add-hook 'org-present-mode-hook
-               (lambda ()
-                 (org-present-big)
-                 (org-display-inline-images)
-                 (org-present-read-only)))
-     (add-hook 'org-present-mode-quit-hook
-               (lambda ()
-                 (org-present-small)
-                 (org-remove-inline-images)
-                 (org-present-read-write)))))
-
 ;; the rest
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
