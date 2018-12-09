@@ -16,12 +16,15 @@
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
 (package-initialize)
 
+(exec-path-from-shell-initialize)
+
 (defvar config-packages
   '(
     company
     dracula-theme
     elm-mode
     erlang
+    exec-path-from-shell
     eziam-theme
     flycheck
     git-gutter
@@ -191,7 +194,7 @@
  '(intero-pop-to-repl nil)
  '(package-selected-packages
    (quote
-    (hasklig-mode php-mode ruby-refactor tide markdown-preview-mode flycheck-gometalinter terraform-mode go-guru neotree toml-mode org-present dockerfile-mode flymd git-gutter yaml-mode rust-mode rainbow-delimiters paredit magit intero idris-mode go-mode fiplr eziam-theme erlang elm-mode)))
+    (exec-path-from-shell hasklig-mode php-mode ruby-refactor tide markdown-preview-mode flycheck-gometalinter terraform-mode go-guru neotree toml-mode org-present dockerfile-mode flymd git-gutter yaml-mode rust-mode rainbow-delimiters paredit magit intero idris-mode go-mode fiplr eziam-theme erlang elm-mode)))
  '(safe-local-variable-values
    (quote
     ((intero-targets "infrastructure:lib" "infrastructure:exe:release" "infrastructure:test:infrastructure-test")
