@@ -27,13 +27,9 @@
     company
     dracula-theme
     elm-mode
-    erlang
     exec-path-from-shell
-    eziam-theme
     flycheck
     git-gutter
-    go-guru
-    go-mode
     haskell-mode
     hasklig-mode
     idris-mode
@@ -42,7 +38,6 @@
     paredit
     projectile
     rainbow-delimiters
-    rust-mode
     terraform-mode
     tide
     web-mode
@@ -90,13 +85,6 @@
 (with-eval-after-load 'company
   (add-to-list 'company-backends 'company-elm))
 (add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
-
-;;;; go config
-(setq gofmt-command "goimports")
-(add-hook 'before-save-hook #'gofmt-before-save)
-(setq gofmt-before-save t)
-(require 'go-guru)
-(add-hook 'go-mode-hook #'go-guru-hl-identifier-mode)
 
 ;;;; terraform config
 (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
@@ -198,7 +186,7 @@
  '(intero-pop-to-repl nil)
  '(package-selected-packages
    (quote
-    (exec-path-from-shell hasklig-mode php-mode ruby-refactor tide markdown-preview-mode flycheck-gometalinter terraform-mode go-guru neotree toml-mode org-present dockerfile-mode flymd git-gutter yaml-mode rust-mode rainbow-delimiters paredit magit intero idris-mode go-mode fiplr eziam-theme erlang elm-mode)))
+    (exec-path-from-shell hasklig-mode tide markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode elm-mode)))
  '(safe-local-variable-values
    (quote
     ((intero-targets "infrastructure:lib" "infrastructure:exe:release" "infrastructure:test:infrastructure-test")
