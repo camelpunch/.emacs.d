@@ -26,7 +26,6 @@
   '(
     company
     dracula-theme
-    elm-mode
     exec-path-from-shell
     flycheck
     git-gutter
@@ -65,7 +64,6 @@
   (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
   (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
   (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
-  (add-hook 'ielm-mode-hook             #'enable-paredit-mode)
   (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
   (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
   (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
@@ -80,11 +78,6 @@
   (add-hook 'haskell-mode-hook 'intero-mode))
 (when (package-installed-p 'hasklig-mode)
   (add-hook 'haskell-mode-hook 'hasklig-mode))
-
-;;;; elm config
-(with-eval-after-load 'company
-  (add-to-list 'company-backends 'company-elm))
-(add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
 
 ;;;; terraform config
 (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
@@ -172,8 +165,6 @@
  '(custom-safe-themes
    (quote
     ("aaffceb9b0f539b6ad6becb8e96a04f2140c8faa1de8039a343a4f1e009174fb" "4bfced46dcfc40c45b076a1758ca106a947b1b6a6ff79a3281f3accacfb3243c" "2a739405edf418b8581dcd176aaf695d319f99e3488224a3c495cb0f9fd814e3" default)))
- '(elm-format-on-save t)
- '(elm-indent-offset 2)
  '(fci-rule-color "#383838")
  '(flycheck-global-modes (quote (not idris-mode)))
  '(global-flycheck-mode t)
@@ -187,7 +178,7 @@
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1))))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell hasklig-mode tide markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode elm-mode)))
+    (exec-path-from-shell hasklig-mode tide markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode)))
  '(safe-local-variable-values
    (quote
     ((intero-targets "infrastructure:lib" "infrastructure:exe:release" "infrastructure:test:infrastructure-test")
