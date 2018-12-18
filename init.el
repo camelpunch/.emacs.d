@@ -148,7 +148,6 @@
 (setq ring-bell-function 'ignore)
 (global-auto-revert-mode t)
 
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
 (setq mouse-wheel-progressive-speed nil)
 (setq mouse-wheel-follow-mouse 't)
 (setq scroll-step 1)
@@ -185,6 +184,7 @@
  '(idris-stay-in-current-window-on-compiler-error t)
  '(intero-extra-ghc-options (quote ("-W" "-XOverloadedStrings")))
  '(intero-pop-to-repl nil)
+ '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1))))
  '(package-selected-packages
    (quote
     (exec-path-from-shell hasklig-mode tide markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode elm-mode)))
