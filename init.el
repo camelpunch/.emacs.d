@@ -38,7 +38,6 @@
     projectile
     rainbow-delimiters
     terraform-mode
-    tide
     web-mode
     yaml-mode
     ))
@@ -82,22 +81,8 @@
 ;;;; terraform config
 (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
 
-;;;; typescript config
-(defun setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  (add-hook 'before-save-hook 'tide-format-before-save)
-  ;; company is an optional dependency. You have to
-  ;; install it separately via package-install
-  ;; `M-x package-install [ret] company`
-  (company-mode +1))
-
 ;; aligns annotation to the right hand side
 (setq company-tooltip-align-annotations t)
-
-(add-hook 'typescript-mode-hook #'setup-tide-mode)
 
 ;;;; haskell config
 (setq haskell-stylish-on-save t)
@@ -178,7 +163,7 @@
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1))))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell hasklig-mode tide markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode)))
+    (exec-path-from-shell hasklig-mode markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode)))
  '(safe-local-variable-values
    (quote
     ((intero-targets "infrastructure:lib" "infrastructure:exe:release" "infrastructure:test:infrastructure-test")
@@ -197,3 +182,5 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (put 'scroll-left 'disabled nil)
+(provide 'init)
+;;; init.el ends here
