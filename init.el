@@ -108,6 +108,7 @@
 
 ;;;; haskell config
 (setq haskell-stylish-on-save t)
+(setq haskell-mode-stylish-haskell-path "brittany")
 (with-eval-after-load 'intero
   (flycheck-add-next-checker 'intero '(warning . haskell-hlint))
   )
