@@ -83,10 +83,14 @@
 (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
 
 ;; aligns annotation to the right hand side
+(defvar company-tooltip-align-annotations)
 (setq company-tooltip-align-annotations t)
 
 ;;;; haskell config
+(defvar haskell-stylish-on-save)
 (setq haskell-stylish-on-save t)
+
+(defvar haskell-mode-stylish-haskell-path)
 (setq haskell-mode-stylish-haskell-path "brittany")
 (with-eval-after-load 'intero
   (flycheck-add-next-checker 'intero '(warning . haskell-hlint))
@@ -109,6 +113,7 @@
 (setq-default indent-tabs-mode nil)
 
 ;; faster autocomplete
+(defvar company-idle-delay)
 (setq company-idle-delay 0.1)
 
 ;; show filename in title bar regardless of numbers of frames
@@ -120,9 +125,11 @@
 (blink-cursor-mode 0)
 (winner-mode 1)
 (savehist-mode 1)
+(defvar linum-format)
 (setq linum-format "%d ")
 (require 'mouse)
 (xterm-mouse-mode t)
+(defvar mouse-sel-mode)
 (setq mouse-sel-mode t)
 (setq ring-bell-function 'ignore)
 (global-auto-revert-mode t)
@@ -135,6 +142,7 @@
 
 (projectile-mode +1)
 (recentf-mode +1)
+(defvar projectile-mode-map)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
