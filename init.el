@@ -75,7 +75,8 @@
 
 (when (package-installed-p 'intero)
   (add-hook 'haskell-mode-hook 'intero-mode))
-(when (package-installed-p 'hasklig-mode)
+(when (and (package-installed-p 'hasklig-mode)
+           (display-graphic-p))
   (add-hook 'haskell-mode-hook 'hasklig-mode))
 
 ;;;; terraform config
