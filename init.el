@@ -20,8 +20,6 @@
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
 (package-initialize)
 
-(exec-path-from-shell-initialize)
-
 (defvar config-packages
   '(
     company
@@ -53,6 +51,9 @@
 
 ;;;; enable packages
 
+(when (package-installed-p 'exec-path-from-shell)
+  (add-hook 'after-init-hook 'exec-path-from-shell-initialize))
+
 (when (package-installed-p 'git-gutter)
   (add-hook 'after-init-hook 'global-git-gutter-mode))
 
@@ -77,7 +78,8 @@
   (add-hook 'haskell-mode-hook 'intero-mode))
 (when (and (package-installed-p 'hasklig-mode)
            (display-graphic-p))
-  (add-hook 'haskell-mode-hook 'hasklig-mode))
+  (add-hook 'haskell-mode-hook 'hasklig-mode)
+  (add-hook 'idris-mode-hook 'hasklig-mode))
 
 ;;;; terraform config
 (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
@@ -140,11 +142,12 @@
 (global-set-key (kbd "<mouse-6>") #'ignore)
 (global-set-key (kbd "<mouse-7>") #'ignore)
 
-(projectile-mode +1)
-(recentf-mode +1)
-(defvar projectile-mode-map)
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(when (package-installed-p 'projectile-mode)
+  (projectile-mode +1)
+  (recentf-mode +1)
+  (defvar projectile-mode-map)
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
 
 (global-set-key (kbd "C-x g") 'magit-status)
 (add-hook 'prog-mode-hook 'show-paren-mode)
@@ -172,7 +175,7 @@
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1))))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell hasklig-mode markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode)))
+    (haskell-mode flycheck dracula-theme company exec-path-from-shell hasklig-mode markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode)))
  '(safe-local-variable-values
    (quote
     ((intero-targets "infrastructure:lib" "infrastructure:exe:release" "infrastructure:test:infrastructure-test")
