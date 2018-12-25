@@ -142,7 +142,7 @@
 (global-set-key (kbd "<mouse-6>") #'ignore)
 (global-set-key (kbd "<mouse-7>") #'ignore)
 
-(when (package-installed-p 'projectile-mode)
+(when (package-installed-p 'projectile)
   (projectile-mode +1)
   (recentf-mode +1)
   (defvar projectile-mode-map)
