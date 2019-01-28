@@ -159,6 +159,7 @@
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
  '(custom-enabled-themes (quote (dracula)))
+ '(case-replace nil)
  '(custom-safe-themes
    (quote
     ("aaffceb9b0f539b6ad6becb8e96a04f2140c8faa1de8039a343a4f1e009174fb" "4bfced46dcfc40c45b076a1758ca106a947b1b6a6ff79a3281f3accacfb3243c" "2a739405edf418b8581dcd176aaf695d319f99e3488224a3c495cb0f9fd814e3" default)))
