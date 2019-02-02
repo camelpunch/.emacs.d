@@ -192,6 +192,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Source Code Variable" :foundry "ADBO" :slant normal :weight normal :height 128 :width normal)))))
+ '(font-lock-function-name-face ((t (:foreground "mediumspringgreen" :weight bold :height 1.0))))
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (put 'scroll-left 'disabled nil)
