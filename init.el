@@ -72,6 +72,7 @@
            (display-graphic-p))
   (add-hook 'prog-mode-hook 'hasklig-mode))
 (custom-set-faces
+ '(completions-common-part ((t (:height 1.0 :width normal))))
  '(font-lock-function-name-face ((t (:height 1.0)))))
 
 ;; no tabs!
