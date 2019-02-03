@@ -30,6 +30,7 @@
     rainbow-delimiters
     terraform-mode
     web-mode
+    which-key
     yaml-mode
     ))
 
@@ -62,6 +63,8 @@
 (setq ring-bell-function 'ignore)
 (global-auto-revert-mode t)
 (setq make-backup-files nil)
+(when (package-installed-p 'which-key)
+  (which-key-mode))
 
 ;; font
 (set-face-attribute 'default nil
