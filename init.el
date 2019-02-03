@@ -199,7 +199,7 @@
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1))))
  '(package-selected-packages
    (quote
-    (web-mode projectile haskell-mode flycheck dracula-theme company exec-path-from-shell hasklig-mode markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode)))
+    (hlint-refactor web-mode projectile haskell-mode flycheck dracula-theme company exec-path-from-shell hasklig-mode markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode)))
  '(safe-local-variable-values
    (quote
     ((intero-targets "infrastructure:lib" "infrastructure:exe:release" "infrastructure:test:infrastructure-test")
