@@ -61,6 +61,7 @@
 (setq mouse-sel-mode t)
 (setq ring-bell-function 'ignore)
 (global-auto-revert-mode t)
+(setq make-backup-files nil)
 
 ;; font
 (set-face-attribute 'default nil
