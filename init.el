@@ -69,7 +69,7 @@
 ;; font
 (set-face-attribute 'default nil
                     :family "Hasklig"
-                    :height 150
+                    :height 120
                     :weight 'normal
                     :width 'normal)
 (when (and (package-installed-p 'hasklig-mode)
