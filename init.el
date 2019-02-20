@@ -83,6 +83,9 @@
 ;; show filename in title bar regardless of numbers of frames
 (setq frame-title-format "%b")
 
+;; no line wrapping
+(set-default 'truncate-lines t)
+
 ;; all programming languages
 (add-hook 'prog-mode-hook
           ;; highlight parens
