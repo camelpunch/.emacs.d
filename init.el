@@ -54,8 +54,6 @@
 (blink-cursor-mode 0)
 (winner-mode 1)
 (savehist-mode 1)
-(defvar linum-format)
-(setq linum-format "%d ")
 (require 'mouse)
 (xterm-mouse-mode t)
 (defvar mouse-sel-mode)
@@ -89,6 +87,8 @@
 (add-hook 'prog-mode-hook
           ;; highlight parens
           'show-paren-mode)
+
+(setq-default display-line-numbers t)
 
 (add-hook 'before-save-hook
           'delete-trailing-whitespace)
