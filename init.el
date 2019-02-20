@@ -47,7 +47,7 @@
 (setenv "SSH_AUTH_SOCK"
         "/run/user/1000/gnupg/S.gpg-agent.ssh")
 
-(when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(when (not (display-graphic-p)) (menu-bar-mode -1))
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
