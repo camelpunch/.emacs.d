@@ -201,7 +201,7 @@
  '(haskell-literate-default (quote bird))
  '(haskellindent-spaces 2)
  '(idris-stay-in-current-window-on-compiler-error t)
- '(intero-extra-ghc-options (quote ("-W" "-XOverloadedStrings")))
+ '(intero-extra-ghc-options (quote ("-Wno-type-defaults")))
  '(intero-pop-to-repl nil)
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1))))
  '(package-selected-packages
