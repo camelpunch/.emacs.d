@@ -29,6 +29,7 @@
     projectile
     rainbow-delimiters
     terraform-mode
+    tide
     web-mode
     which-key
     yaml-mode
@@ -142,6 +143,22 @@
 ;; terraform
 (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
 
+;; typescript
+(defun setup-tide-mode ()
+  "Set up Tide for TypeScript."
+  (interactive)
+  (tide-setup)
+  (tide-hl-identifier-mode +1))
+
+(add-hook 'before-save-hook 'tide-format-before-save)
+(add-hook 'typescript-mode-hook #'setup-tide-mode)
+
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+(add-hook 'web-mode-hook
+          (lambda ()
+            (when (string-equal "tsx" (file-name-extension buffer-file-name))
+              (setup-tide-mode))))
+
 ;; align autocomplete tooltips to the right hand side
 (defvar company-tooltip-align-annotations)
 (setq company-tooltip-align-annotations t)
@@ -190,10 +207,10 @@
  '(case-replace nil)
  '(company-idle-delay 0.1)
  '(company-tooltip-align-annotations t)
- '(custom-enabled-themes (quote (manoj-dark)))
+ '(custom-enabled-themes (quote (dracula)))
  '(custom-safe-themes
    (quote
-    ("aaffceb9b0f539b6ad6becb8e96a04f2140c8faa1de8039a343a4f1e009174fb" "4bfced46dcfc40c45b076a1758ca106a947b1b6a6ff79a3281f3accacfb3243c" "2a739405edf418b8581dcd176aaf695d319f99e3488224a3c495cb0f9fd814e3" default)))
+    ("274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e" "aaffceb9b0f539b6ad6becb8e96a04f2140c8faa1de8039a343a4f1e009174fb" "4bfced46dcfc40c45b076a1758ca106a947b1b6a6ff79a3281f3accacfb3243c" "2a739405edf418b8581dcd176aaf695d319f99e3488224a3c495cb0f9fd814e3" default)))
  '(fci-rule-color "#383838")
  '(flycheck-global-modes (quote (not idris-mode)))
  '(global-company-mode t)
@@ -206,14 +223,13 @@
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1))))
  '(package-selected-packages
    (quote
-    (hlint-refactor web-mode projectile haskell-mode flycheck dracula-theme company exec-path-from-shell hasklig-mode markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode)))
+    (kubernetes which-key hlint-refactor web-mode projectile haskell-mode flycheck dracula-theme company exec-path-from-shell hasklig-mode markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode)))
  '(safe-local-variable-values
    (quote
     ((intero-targets "infrastructure:lib" "infrastructure:exe:release" "infrastructure:test:infrastructure-test")
      (idris-load-packages "mrk")
      (intero-targets "release:lib" "release:exe:release-exe" "release:test:release-test")
-     (idris-load-packages "contrib"))))
-)
+     (idris-load-packages "contrib")))))
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (put 'scroll-left 'disabled nil)
