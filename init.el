@@ -90,7 +90,8 @@
 ;; all programming languages
 (add-hook 'prog-mode-hook
           ;; highlight parens
-          'show-paren-mode)
+          'show-paren-mode
+          'eldoc-mode)
 
 (setq-default display-line-numbers t)
 
