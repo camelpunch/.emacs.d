@@ -149,7 +149,8 @@
   "Set up Tide for TypeScript."
   (interactive)
   (tide-setup)
-  (tide-hl-identifier-mode +1))
+  (tide-hl-identifier-mode +1)
+  (electric-indent-mode -1))
 
 (add-hook 'before-save-hook 'tide-format-before-save)
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
