@@ -14,6 +14,7 @@
 
 (defvar config-packages
   '(
+    alchemist
     company
     dracula-theme
     exec-path-from-shell
