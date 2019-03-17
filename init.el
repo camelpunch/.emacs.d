@@ -29,6 +29,7 @@
     paredit
     projectile
     rainbow-delimiters
+    sr-speedbar
     terraform-mode
     tide
     web-mode
@@ -115,6 +116,13 @@
 (global-set-key (kbd "<mouse-5>") #'scroll-up-line)
 (global-set-key (kbd "<mouse-6>") #'ignore)
 (global-set-key (kbd "<mouse-7>") #'ignore)
+
+;; sr-speedbar
+(defvar speedbar-show-unknown-files)
+(setq speedbar-show-unknown-files t)
+(defvar sr-speedbar-right-side)
+(setq sr-speedbar-right-side nil)
+(global-set-key (kbd "<f12>") 'sr-speedbar-toggle)
 
 ;; copy PATH from shell
 (when (package-installed-p 'exec-path-from-shell)
