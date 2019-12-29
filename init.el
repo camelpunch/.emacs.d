@@ -25,7 +25,9 @@
     hlint-refactor
     idris-mode
     intero
+    json-mode
     magit
+    nix-mode
     paredit
     projectile
     rainbow-delimiters
@@ -77,6 +79,10 @@
            (display-graphic-p))
   (add-hook 'prog-mode-hook 'hasklig-mode))
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(completions-common-part ((t (:height 1.0 :width normal))))
  '(font-lock-function-name-face ((t (:height 1.0)))))
 
@@ -236,7 +242,7 @@
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1))))
  '(package-selected-packages
    (quote
-    (kubernetes which-key hlint-refactor web-mode projectile haskell-mode flycheck dracula-theme company exec-path-from-shell hasklig-mode markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode)))
+    (json-mode nix-mode kubernetes which-key hlint-refactor web-mode projectile haskell-mode flycheck dracula-theme company exec-path-from-shell hasklig-mode markdown-preview-mode terraform-mode toml-mode dockerfile-mode flymd git-gutter yaml-mode rainbow-delimiters paredit magit intero idris-mode)))
  '(safe-local-variable-values
    (quote
     ((intero-targets "infrastructure:lib" "infrastructure:exe:release" "infrastructure:test:infrastructure-test")
